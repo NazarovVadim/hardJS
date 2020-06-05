@@ -1,14 +1,4 @@
 let num = 266219;
-let numStr = String(num);
-let arr = [];
 
-for(let i = 0; i < 6; i++){
-    arr.push(numStr[i]);
-}
-
-let mult = arr.reduce(function(sum, current){
-    return sum * current;
-});
-
-console.log(mult);
-console.log(+String(mult ** 3).substr(0,3));
+console.log(num.toString().split('').reduce((mult, curr) => mult * curr));
+console.log((num.toString().split('').reduce((a, b) => a * b ) **3).toString().slice(0, 2));
