@@ -1,25 +1,14 @@
-let lang = 'ru';
+function stringProcessing(str){
+    if (typeof str != 'string'){
+        return 'Необходимо передать строку!';
+    }
 
-if (lang == 'ru') console.log('понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
-else if (lang == 'en') console.log('sunday, monday, tusday, wensday, thursday, friday, saturday');
+    str = str.trim();
+    if (str.length > 30){
+        str = str.substr(0, 30) + '...';
+    }
 
-switch (lang){
-    case 'ru':
-        console.log('понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
-        break;
-    case 'en':
-        console.log('sunday, monday, tusday, wensday, thursday, friday, saturday');
-        break;
+    return str;
 }
 
-let arrDays = [
-    ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'],
-    ['sunday', 'monday', 'tusday', 'wensday', 'thursday', 'friday', 'saturday']
-];
-let res = (lang == 'ru') ? 0 : (lang == 'ru') ? 1 : 'неверный язык';
-console.log(arrDays[res]);
-
-let namePerson = 'Максим';
-
-res = (namePerson == 'Артем') ? console.log('Директор') : (namePerson == 'Максим') ? console.log('Преподаватель') : console.log('Студент');
-
+console.log(stringProcessing('            Здась будет примерно тридцать символов просто чтобы проверить мою функцию! '));
