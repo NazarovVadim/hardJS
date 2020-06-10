@@ -1,14 +1,33 @@
-function stringProcessing(str){
-    if (typeof str != 'string'){
-        return 'Необходимо передать строку!';
-    }
+let arr = ['435', '44356', '4363', '52362', '2638547', '2', '6736'];
 
-    str = str.trim();
-    if (str.length > 30){
-        str = str.substr(0, 30) + '...';
+for (let i = 0; i < arr.length; i++){
+    if (arr[i].substring(0, 1) == 4 || arr[i].substring(0, 1) == 2){
+        console.log(+arr[i]);
     }
+}
+console.log('Простые числа: ');
 
-    return str;
+nextPrime:
+for (let i = 2; i <=100; i++){
+    for (let j = 2; j < i; j++){
+        if (i % j == 0) continue nextPrime;
+    }
+    console.log(i);
+    
 }
 
-console.log(stringProcessing('            Здась будет примерно тридцать символов просто чтобы проверить мою функцию! '));
+
+
+// function prime (n){
+//     for (let i =2; i<=Math.sqrt(n); i++){
+//         if (n%i == 0)
+//             return false;
+//     return true;
+//     }
+// }
+
+// for (let i = 0; i < 100; i++){
+//     if (prime(i)){
+//         console.log(i);
+//     }
+// }
