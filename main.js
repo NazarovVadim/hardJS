@@ -6,12 +6,12 @@ for (let i = 0; i < arr.length; i++){
     }
 }
 console.log('Простые числа: ');
-
+let del = 0;
 nextPrime:
 for (let i = 2; i <=100; i++){
     for (let j = 2; j < i; j++){
-        if (i % j == 0) continue nextPrime;
+        if (i % j == 0)
+            continue nextPrime;
     }
-    console.log(i);
-    
+    console.log(i + '  Делители: 1 и ' + i);
 }
