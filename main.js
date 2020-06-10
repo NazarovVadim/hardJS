@@ -15,19 +15,3 @@ for (let i = 2; i <=100; i++){
     console.log(i);
     
 }
-
-
-
-// function prime (n){
-//     for (let i =2; i<=Math.sqrt(n); i++){
-//         if (n%i == 0)
-//             return false;
-//     return true;
-//     }
-// }
-
-// for (let i = 0; i < 100; i++){
-//     if (prime(i)){
-//         console.log(i);
-//     }
-// }
