@@ -1,21 +1,20 @@
-let arr = ['435', '44356', '4363', '52362', '2638547', '2', '6736'];
+let week = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'];
+const div = document.querySelector('.container');
+let date = new Date();
 
-let arr2 = arr.filter(a => a[0] == 4 || a[0] == 2);
-console.log(arr2);
 
-console.log('Простые числа: ');
-let del = 0;
-
-function isPrime (n){
-    let start = 2;
-    const a = Math.sqrt(n);
-    while (start <= a){
-        if (n % start++ < 1) return false;
-    }
-    return true;
-}
-for(let i = 2; i<=100; i++){
-    if(isPrime(i)){
-        console.log(i + '  Делители: 1 и ' + i);
+for (let i = 0; i < week.length; i++){
+    if(date.getDay() === i+1){
+        if(i>=5){
+            div.innerHTML += `<span><strong><i>${week[i]}</i></strong></span> <br>`;
+        } else{
+            div.innerHTML += `<span><strong>${week[i]}</strong></span> <br>`;
+        }
+    } else{
+        if(i>=5){
+            div.innerHTML += `<span><i>${week[i]}</i></span> <br>`;
+        } else{
+            div.innerHTML += `<span>${week[i]}</span> <br>`;
+        }
     }
 }
